@@ -83,6 +83,7 @@ const UserModal = ({ user, onClose, onSave }) => {
                 <input
                   type="checkbox"
                   name="viewReports"
+                  className="ml-2"
                   checked={formData.permissions.viewReports}
                   onChange={handlePermissionChange}
                 />
@@ -92,6 +93,7 @@ const UserModal = ({ user, onClose, onSave }) => {
                 <input
                   type="checkbox"
                   name="editData"
+                  className="ml-2"
                   checked={formData.permissions.editData}
                   onChange={handlePermissionChange}
                 />
@@ -101,6 +103,7 @@ const UserModal = ({ user, onClose, onSave }) => {
                 <input
                   type="checkbox"
                   name="manageUsers"
+                  className="ml-2"
                   checked={formData.permissions.manageUsers}
                   onChange={handlePermissionChange}
                 />
