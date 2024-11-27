@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css or global.css */
+button {
+  transition: transform 0.2s ease-in-out;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+td, th {
+  padding: 12px;
+}
+
+th {
+  background-color: #4F46E5; /* Tailwind primary color */
+  color: white;
+}
+
+
