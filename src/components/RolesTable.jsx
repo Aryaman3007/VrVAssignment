@@ -6,16 +6,16 @@ const RolesTable = ({ roles, onPermissionChange }) => {
       <thead>
         <tr>
           <th className="p-4 border">Role</th>
-          <th className="p-4 border">Can Read</th>
-          <th className="p-4 border">Can Write</th>
-          <th className="p-4 border">Can Delete</th>
+          <th className="p-4 border">View Reports</th>
+          <th className="p-4 border">Edit Data</th>
+          <th className="p-4 border">Manage Users</th>
         </tr>
       </thead>
       <tbody>
         {roles.map((role) => (
           <tr key={role.id}>
             <td className="p-4 border">{role.name}</td>
-            {["canRead", "canWrite", "canDelete"].map((permission) => (
+            {["viewReports", "editData", "manageUsers"].map((permission) => (
               <td className="p-4 border" key={permission}>
                 <input
                   type="checkbox"

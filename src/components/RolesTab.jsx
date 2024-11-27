@@ -6,17 +6,17 @@ const RolesTab = () => {
     {
       id: 1,
       name: "Admin",
-      permissions: { canRead: true, canWrite: true, canDelete: true },
+      permissions: { viewReports: true, editData: true, manageUsers: true },
     },
     {
       id: 2,
-      name: "Editor",
-      permissions: { canRead: true, canWrite: true, canDelete: false },
+      name: "Manager",
+      permissions: { viewReports: true, editData: true, manageUsers: false },
     },
     {
       id: 3,
-      name: "Viewer",
-      permissions: { canRead: true, canWrite: false, canDelete: false },
+      name: "Employee",
+      permissions: { viewReports: true, editData: false, manageUsers: false },
     },
   ]);
 

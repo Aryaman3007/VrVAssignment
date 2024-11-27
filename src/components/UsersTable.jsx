@@ -10,9 +10,9 @@ const UsersTable = ({ users, onDelete, onEdit }) => {
           <tr>
             <th className="px-4 py-2 text-left text-xs md:text-sm font-semibold uppercase">Name</th>
             <th className="px-4 py-2 text-left text-xs md:text-sm font-semibold uppercase">Role</th>
-            <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Can Read</th>
-            <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Can Write</th>
-            <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Can Delete</th>
+            <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">View Reports</th>
+            <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Edit Data</th>
+            <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Manage Users</th>
             <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Status</th>
             <th className="px-4 py-2 text-center text-xs md:text-sm font-semibold uppercase">Actions</th>
           </tr>
@@ -31,13 +31,13 @@ const UsersTable = ({ users, onDelete, onEdit }) => {
               <td className="px-4 py-2 text-xs md:text-sm font-medium text-gray-800">{user.role}</td>
               {/* Permissions */}
               <td className="px-4 py-2 text-center">
-                {user.permissions.canRead ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />}
+                {user.permissions.viewReports ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />}
               </td>
               <td className="px-4 py-2 text-center">
-                {user.permissions.canWrite ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />}
+                {user.permissions.editData ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />}
               </td>
               <td className="px-4 py-2 text-center">
-                {user.permissions.canDelete ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />}
+                {user.permissions.manageUsers ? <FaCheck className="text-green-500" /> : <FaTimes className="text-red-500" />}
               </td>
               {/* Status */}
               <td className="px-4 py-2 text-center">

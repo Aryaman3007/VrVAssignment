@@ -6,7 +6,7 @@ const UserModal = ({ user, onClose, onSave }) => {
       name: "",
       role: "",
       status: "Active",
-      permissions: { canRead: false, canWrite: false, canDelete: false },
+      permissions: { viewReports: false, editData: false, manageUsers: false },
     }
   );
 
@@ -59,8 +59,8 @@ const UserModal = ({ user, onClose, onSave }) => {
                 Select Role
               </option>
               <option value="Admin">Admin</option>
-              <option value="Editor">Editor</option>
-              <option value="Viewer">Viewer</option>
+              <option value="Manager">Manager</option>
+              <option value="Employee">Employee</option>
             </select>
           </div>
           <div className="mb-4">
@@ -82,8 +82,8 @@ const UserModal = ({ user, onClose, onSave }) => {
               <label>
                 <input
                   type="checkbox"
-                  name="canRead"
-                  checked={formData.permissions.canRead}
+                  name="viewReports"
+                  checked={formData.permissions.viewReports}
                   onChange={handlePermissionChange}
                 />
                 <span className="ml-2">Can Read</span>
@@ -91,8 +91,8 @@ const UserModal = ({ user, onClose, onSave }) => {
               <label>
                 <input
                   type="checkbox"
-                  name="canWrite"
-                  checked={formData.permissions.canWrite}
+                  name="editData"
+                  checked={formData.permissions.editData}
                   onChange={handlePermissionChange}
                 />
                 <span className="ml-2">Can Write</span>
@@ -100,8 +100,8 @@ const UserModal = ({ user, onClose, onSave }) => {
               <label>
                 <input
                   type="checkbox"
-                  name="canDelete"
-                  checked={formData.permissions.canDelete}
+                  name="manageUsers"
+                  checked={formData.permissions.manageUsers}
                   onChange={handlePermissionChange}
                 />
                 <span className="ml-2">Can Delete</span>

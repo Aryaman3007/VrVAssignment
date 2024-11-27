@@ -1,28 +1,13 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; // Import Navigate
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"; 
 import Navbar from "./components/Navbar";
 import UsersTable from "./components/UsersTable";
 import UserModal from "./components/UserModal";
 import RolesTab from "./components/RolesTab";
+import usersData from "./data/data.js"; 
 
 const App = () => {
-  const [users, setUsers] = useState([
-    {
-      id: 1,
-      name: "John Doe",
-      role: "Admin",
-      permissions: { canRead: true, canWrite: true, canDelete: false },
-      status: "Active",
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      role: "Editor",
-      permissions: { canRead: true, canWrite: false, canDelete: false },
-      status: "Inactive",
-    },
-  ]);
-
+  const [users, setUsers] = useState(usersData); 
   const [showModal, setShowModal] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
 
@@ -70,7 +55,7 @@ const App = () => {
           <Routes>
             {/* Redirect from root to /users */}
             <Route path="/" element={<Navigate to="/users" />} />
-            
+
             {/* Users Management Route */}
             <Route
               path="/users"

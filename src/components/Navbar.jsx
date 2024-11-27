@@ -11,7 +11,6 @@ const Navbar = () => {
 
   return (
     <div className="bg-gray-800 text-white">
-      {/* Top Navbar for smaller screens */}
       <div className="flex items-center justify-between px-4 py-3 sm:hidden">
         <h1 className="text-xl font-bold">RBAC Dashboard</h1>
         <button
@@ -22,7 +21,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Sidebar for larger screens and toggleable menu */}
       <div
         className={`sm:w-64 sm:flex sm:flex-col ${
           isOpen ? 'flex flex-col' : 'hidden'
